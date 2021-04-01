@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <form @submit.prevent="handleSubmit">
+        <label>Email</label>
+        <input type="text" placeholder="email" maxlength="40">
+        <label>Username</label>
+        <input type="text" placeholder="username" maxlength="15">
+
+        <label>ชื่อ</label>
+        <input type="text" placeholder="ชื่อ" maxlength="35">
+
+        <label>นามสกุล</label>
+        <input type="text" placeholder="นามสกุล" maxlength="35">
+
+        <label>เบอร์โทรศัพท์</label>
+        <input type="text" placeholder="เบอร์โทรศัพท์" maxlength="10">
+
+        <label>รหัสผ่าน</label>
+        <input onkeyup="passchek()" id="pwd1" type="password" placeholder="รหัสผ่าน" maxlength="35">
+
+        <label>ยืนยันรหัสผ่าน</label>
+        <input onkeyup="passchek()" id="pwd2" type="password" placeholder="ยืนยันรหัสผ่าน" maxlength="35">
+        <div class="errpwd"></div>
+
+
+        <button class="btn" type="submit" name="userReg">สมัคร</button>
+    </form>
+</body>
+<script src="JS_register.js"></script>
+<script>
+    export default {
+        name: 'Register',
+        data() {
+            return {
+                email: '',
+                username: '',
+                first_name: '',
+                last_name: '',
+                phone: '',
+                password: '',
+                password_confirm: ''
+            }
+        },
+        methods: {
+            handleSubmit() {
+                console.log(submit)
+            }
+        }
+    }
+</script>
+
+</html>
